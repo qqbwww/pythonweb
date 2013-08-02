@@ -2,11 +2,25 @@
 import web
 
 render = web.template.render('../template')
+html5render = web.template.render('../template/html5')
 urls = (
     '/', 'index2',
-    '/add', 'add'
+    '/add', 'add',
+    '/html5', 'html5',
+    '/html5/basic', 'basic',
+
 )
 db = web.database(dbn='mysql', user='qqbwww', pw='wwwqqb', db='test')
+
+
+class html5:
+    def GET(self):
+        return html5render.html5()
+
+
+class basic:
+    def GET(self):
+        return html5render.basic()
 
 
 class index2:
