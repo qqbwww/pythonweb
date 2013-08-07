@@ -83,13 +83,6 @@ class catch(Thread):
             sys.stdout.flush()
 
 if __name__ == '__main__':
-    '''
-    t = tieba()
-    urls = t.getImagesFromUrl('/p/2511019984')
-    for url in urls:
-        if (url.find('class="BDE_Image"') > 0):
-            print url
-    '''
     maxPage = 500
     threadSum = 1
     if threadSum > maxPage:
